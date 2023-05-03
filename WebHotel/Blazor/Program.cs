@@ -13,10 +13,8 @@ Config cadenaConexion = new Config(builder.Configuration.GetConnectionString("My
 builder.Services.AddSingleton(cadenaConexion); ;
 
 builder.Services.AddScoped<ILoginServicio, LoginServicio>();
-
-builder.Services.AddScoped<IClienteServicio, ClienteServicio>();
-
 builder.Services.AddScoped<IUsuarioServicio, UsuarioServicio>();
+builder.Services.AddScoped<IClienteServicio, ClienteServicio>();
 
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
