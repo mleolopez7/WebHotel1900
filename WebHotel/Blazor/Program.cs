@@ -10,9 +10,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 Config cadenaConexion = new Config(builder.Configuration.GetConnectionString("MySQL"));
-builder.Services.AddSingleton(cadenaConexion); ;
+builder.Services.AddSingleton(cadenaConexion); 
 
 builder.Services.AddScoped<ILoginServicio, LoginServicio>();
+builder.Services.AddScoped<IHabitacionServicio, HabitacionServicio>();
+builder.Services.AddScoped<IUsuarioServicio, UsuarioServicio>();
+builder.Services.AddScoped<IClienteServicio, ClienteServicio>();
+
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 builder.Services.AddHttpContextAccessor();

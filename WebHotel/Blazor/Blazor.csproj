@@ -34,8 +34,4 @@
     <None Include="Pages\MisHabitaciones\Habitaciones.razor" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\MisClientes\" />
-  </ItemGroup>
-
 </Project>
